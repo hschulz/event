@@ -1,0 +1,55 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "0c395fd4a26aa0cfce79ce86236b6473",
+    "packages": [
+        {
+            "name": "hschulz/data-structures",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hschulz/data-structures.git",
+                "reference": "2cfc0c2c0cd4488b34e724ffa1c412957dfc790b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hschulz/data-structures/zipball/2cfc0c2c0cd4488b34e724ffa1c412957dfc790b",
+                "reference": "2cfc0c2c0cd4488b34e724ffa1c412957dfc790b",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "hschulz\\DataStructures\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Hauke Schulz",
+                    "email": "hauke27@gmail.com"
+                }
+            ],
+            "description": "Implementation of useful structures.",
+            "keywords": [
+                "Structures",
+                "data"
+            ],
+            "time": "2018-04-22T10:24:17+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "dev",
+    "stability-flags": [],
+    "prefer-stable": true,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}

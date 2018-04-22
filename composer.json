@@ -1,0 +1,24 @@
+{
+    "name": "hschulz/event",
+    "description": "Description of project Event.",
+    "authors": [
+        {
+            "name": "Hauke Schulz",
+            "email": "hauke27@gmail.com"
+        }
+    ],
+    "require": {
+        "hschulz/data-structures": "*"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "autoload": {
+        "psr-4": {
+            "hschulz\\Event\\": "src/"
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "apcu-autoloader": true
+    }
+}
