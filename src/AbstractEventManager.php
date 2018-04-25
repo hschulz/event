@@ -2,19 +2,16 @@
 
 namespace hschulz\Event;
 
-use \hschulz\DataStructures\Queue\PriorityQueue;
-use \hschulz\Event\Event;
-use \hschulz\Event\EventListener;
-use \hschulz\Event\EventManager;
-use \hschulz\Event\ResponseCollection;
-use \is_callable;
-use \call_user_func;
 use \array_key_exists;
+use \call_user_func;
+use \hschulz\DataStructures\Queue\PriorityQueue;
+use \is_callable;
 
 /**
  * Description of AbstractEventManager
  */
-class AbstractEventManager implements EventManager {
+class AbstractEventManager implements EventManager
+{
 
     /**
      *
@@ -25,7 +22,8 @@ class AbstractEventManager implements EventManager {
     /**
      *
      */
-    public function __construct() {
+    public function __construct()
+    {
         $this->events = [];
     }
 
@@ -37,7 +35,8 @@ class AbstractEventManager implements EventManager {
      * @param int $priority The execution order for multiple callbacks
      * @void
      */
-    public function attach(string $event, callable $callback, int $priority = self::PRIORITY_MIN): void {
+    public function attach(string $event, callable $callback, int $priority = self::PRIORITY_MIN): void
+    {
 
         /* If there aren't any listeners for an event yet */
         if (empty($this->events[$event])) {
@@ -60,7 +59,8 @@ class AbstractEventManager implements EventManager {
      * @param callable $callback a callable function
      * @return bool true on success false on failure
      */
-    public function detach(string $event, callable $callback): bool {
+    public function detach(string $event, callable $callback): bool
+    {
         return false;
     }
 
@@ -72,8 +72,8 @@ class AbstractEventManager implements EventManager {
      * @param  Event $event
      * @return ResponseCollection
      */
-    public function trigger(Event $event): ResponseCollection {
-
+    public function trigger(Event $event): ResponseCollection
+    {
         $response = new ResponseCollection();
 
         $queue = $this->getListeners($event->getName());
@@ -108,7 +108,8 @@ class AbstractEventManager implements EventManager {
      * @param  string $event
      * @return void
      */
-    public function clearListeners(string $event): void {
+    public function clearListeners(string $event): void
+    {
         unset($this->events[$event]);
     }
 
@@ -117,7 +118,8 @@ class AbstractEventManager implements EventManager {
      * @param string $event An event name
      * @return PriorityQueue
      */
-    public function getListeners(string $event): PriorityQueue {
+    public function getListeners(string $event): PriorityQueue
+    {
         return array_key_exists($event, $this->events)
                 ? clone $this->events[$event]
                 : new PriorityQueue();

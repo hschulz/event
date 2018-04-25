@@ -2,12 +2,11 @@
 
 namespace hschulz\Event;
 
-use \hschulz\Event\Event;
-
 /**
  * Description of AbstractEvent
  */
-abstract class AbstractEvent implements Event {
+abstract class AbstractEvent implements Event
+{
 
     /**
      *
@@ -30,7 +29,8 @@ abstract class AbstractEvent implements Event {
     /**
      *
      */
-    public function __construct() {
+    public function __construct()
+    {
         $this->name         = '';
         $this->params       = [];
         $this->isPropagated = true;
@@ -40,7 +40,8 @@ abstract class AbstractEvent implements Event {
      *
      * @return string
      */
-    public function getName(): string {
+    public function getName(): string
+    {
         return $this->name;
     }
 
@@ -49,7 +50,8 @@ abstract class AbstractEvent implements Event {
      * @param string $name
      * @return void
      */
-    public function setName(string $name): void {
+    public function setName(string $name): void
+    {
         $this->name = $name;
     }
 
@@ -57,7 +59,8 @@ abstract class AbstractEvent implements Event {
      *
      * @return array
      */
-    public function getParams(): array {
+    public function getParams(): array
+    {
         return $this->params;
     }
 
@@ -66,7 +69,8 @@ abstract class AbstractEvent implements Event {
      * @param array $params
      * @return void
      */
-    public function setParams(array $params): void {
+    public function setParams(array $params): void
+    {
         $this->params = $params;
     }
 
@@ -75,7 +79,8 @@ abstract class AbstractEvent implements Event {
      * @param bool $flag
      * @return void
      */
-    public function stopPropagation(bool $flag = true): void {
+    public function stopPropagation(bool $flag = true): void
+    {
         $this->isPropagated = !$flag;
     }
 
@@ -84,15 +89,16 @@ abstract class AbstractEvent implements Event {
      * @param string $name
      * @return mixed
      */
-    public function getParam(string $name) {
-
+    public function getParam(string $name)
+    {
     }
 
     /**
      *
      * @return bool
      */
-    public function isPropagationStopped(): bool {
+    public function isPropagationStopped(): bool
+    {
         return $this->isPropagated;
     }
 }

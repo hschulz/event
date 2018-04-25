@@ -2,12 +2,11 @@
 
 namespace hschulz\Event;
 
-use \hschulz\Event\EventManager;
-
 /**
  *
  */
-class EventListener {
+class EventListener
+{
 
     /**
      *
@@ -33,7 +32,8 @@ class EventListener {
      * @param callable $callback
      * @param int $priority
      */
-    public function __construct(string $name, callable $callback, int $priority = EventManager::PRIORITY_MIN) {
+    public function __construct(string $name, callable $callback, int $priority = EventManager::PRIORITY_MIN)
+    {
         $this->name = $name;
         $this->callback = $callback;
         $this->priority = $priority;
@@ -43,7 +43,8 @@ class EventListener {
      *
      * @return string
      */
-    public function getName(): string {
+    public function getName(): string
+    {
         return $this->name;
     }
 
@@ -51,7 +52,8 @@ class EventListener {
      *
      * @return callable
      */
-    public function getCallback(): callable {
+    public function getCallback(): callable
+    {
         return $this->callback;
     }
 
@@ -59,7 +61,8 @@ class EventListener {
      *
      * @return int
      */
-    public function getPriority(): int {
+    public function getPriority(): int
+    {
         return $this->priority;
     }
 }

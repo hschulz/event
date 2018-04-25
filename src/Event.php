@@ -5,8 +5,8 @@ namespace hschulz\Event;
 /**
  *
  */
-interface Event {
-
+interface Event
+{
     /**
      *
      * @var string

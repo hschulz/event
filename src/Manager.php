@@ -2,9 +2,9 @@
 
 namespace hschulz\Event;
 
-use \hschulz\Event\AbstractEventManager;
-
 /**
  *
  */
-class Manager extends AbstractEventManager {}
+class Manager extends AbstractEventManager
+{
+}
