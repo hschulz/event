@@ -2,10 +2,10 @@
 
 namespace hschulz\Event;
 
-use \array_key_exists;
-use \call_user_func;
 use \hschulz\DataStructures\Queue\PriorityQueue;
-use \is_callable;
+use function \array_key_exists;
+use function \call_user_func;
+use function \is_callable;
 
 /**
  * Description of AbstractEventManager
@@ -15,7 +15,7 @@ class AbstractEventManager implements EventManager
 
     /**
      *
-     * @var array
+     * @var array<PriorityQueue>
      */
     protected $events = [];
 
@@ -45,7 +45,7 @@ class AbstractEventManager implements EventManager
             $this->events[$event] = new PriorityQueue();
         }
 
-        /*  */
+        /* Create a new listener with the given data */
         $listener = new EventListener($event, $callback, $priority);
 
         /* Insert the new callback into the queue. */
@@ -86,7 +86,7 @@ class AbstractEventManager implements EventManager
             $callback = $listener->getCallback();
 
             if (empty($callback) || !is_callable($callback)) {
-                $this->detach($oListener);
+                // @todo detach listener
                 continue;
             }
 
