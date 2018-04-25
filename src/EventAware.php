@@ -2,12 +2,11 @@
 
 namespace hschulz\Event;
 
-use \hschulz\Event\EventManager;
-
 /**
  *
  */
-interface EventAware {
+interface EventAware
+{
 
     /**
      *

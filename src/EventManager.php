@@ -2,14 +2,11 @@
 
 namespace hschulz\Event;
 
-use \hschulz\Event\Event;
-use \hschulz\Event\ResponseCollection;
-
 /**
  *
  */
-interface EventManager {
-
+interface EventManager
+{
     /**
      *
      * @var int
@@ -30,7 +27,7 @@ interface EventManager {
      * @param int $priority the priority at which the $callback executed
      * @return void
      */
-    public function attach(string $event, callable $callback, int $priority = EventManager::PRIORITY_MIN): void;
+    public function attach(string $event, callable $callback, int $priority = self::PRIORITY_MIN): void;
 
     /**
      * Detaches a listener from an event
