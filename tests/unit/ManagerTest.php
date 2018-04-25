@@ -6,10 +6,10 @@ use \hschulz\Event\AbstractEvent;
 use \hschulz\Event\Manager;
 use \PHPUnit\Framework\TestCase;
 
-final class ManagerTest extends TestCase {
-
-    public function testCanAttachListener() {
-
+final class ManagerTest extends TestCase
+{
+    public function testCanAttachListener()
+    {
         $methods = ['getName', 'setName', 'getParams', 'setParams'];
 
         $stub = $this->getMockForAbstractClass(
@@ -25,7 +25,7 @@ final class ManagerTest extends TestCase {
              ->will($this->returnValue(['test' => 'test']));
 
         $manager = new Manager();
-        $manager->attach('test', function($event) {
+        $manager->attach('test', function ($event) {
             return 'AAABBB';
         });
 
