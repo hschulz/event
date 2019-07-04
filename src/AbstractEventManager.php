@@ -2,9 +2,9 @@
 
 namespace hschulz\Event;
 
-use \hschulz\DataStructures\Queue\PriorityQueue;
 use function \array_key_exists;
 use function \call_user_func;
+use \hschulz\DataStructures\Queue\PriorityQueue;
 use function \is_callable;
 
 /**
