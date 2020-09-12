@@ -15,7 +15,13 @@ final class ManagerTest extends TestCase
         $methods = ['getName', 'setName', 'getParams', 'setParams'];
 
         $stub = $this->getMockForAbstractClass(
-            AbstractEvent::class, [], '', true, true, true, $methods
+            AbstractEvent::class,
+            [],
+            '',
+            true,
+            true,
+            true,
+            $methods
         );
 
         $stub->expects($this->any())
