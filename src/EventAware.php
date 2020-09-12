@@ -1,13 +1,14 @@
 <?php
 
-namespace hschulz\Event;
+declare(strict_types=1);
+
+namespace Hschulz\Event;
 
 /**
  *
  */
 interface EventAware
 {
-
     /**
      * Returns the event manager object if set.
      *

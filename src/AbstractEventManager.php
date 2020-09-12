@@ -1,23 +1,24 @@
 <?php
 
-namespace hschulz\Event;
+declare(strict_types=1);
 
-use \hschulz\DataStructures\Queue\PriorityQueue;
-use function \array_key_exists;
-use function \call_user_func;
-use function \is_callable;
+namespace Hschulz\Event;
+
+use Hschulz\DataStructures\Queue\PriorityQueue;
+use function array_key_exists;
+use function call_user_func;
+use function is_callable;
 
 /**
  * Description of AbstractEventManager
  */
 class AbstractEventManager implements EventManager
 {
-
     /**
      *
      * @var array<PriorityQueue>
      */
-    protected $events = [];
+    protected array $events = [];
 
     /**
      *
@@ -37,7 +38,6 @@ class AbstractEventManager implements EventManager
      */
     public function attach(string $event, callable $callback, int $priority = self::PRIORITY_MIN): void
     {
-
         /* If there aren't any listeners for an event yet */
         if (empty($this->events[$event])) {
 

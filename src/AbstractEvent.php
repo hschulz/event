@@ -1,30 +1,31 @@
 <?php
 
-namespace hschulz\Event;
+declare(strict_types=1);
+
+namespace Hschulz\Event;
 
 /**
  * Description of AbstractEvent
  */
 abstract class AbstractEvent implements Event
 {
-
     /**
      *
      * @var string
      */
-    protected $name = '';
+    protected string $name = '';
 
     /**
      *
      * @var array
      */
-    protected $params = [];
+    protected array $params = [];
 
     /**
      *
      * @var bool
      */
-    protected $isPropagated = true;
+    protected bool $isPropagated = true;
 
     /**
      *
@@ -91,6 +92,7 @@ abstract class AbstractEvent implements Event
      */
     public function getParam(string $name)
     {
+        return $this->params[$name] ?? null;
     }
 
     /**

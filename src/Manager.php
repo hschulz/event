@@ -1,6 +1,8 @@
 <?php
 
-namespace hschulz\Event;
+declare(strict_types=1);
+
+namespace Hschulz\Event;
 
 /**
  *

@@ -1,6 +1,8 @@
 <?php
 
-namespace hschulz\Event;
+declare(strict_types=1);
+
+namespace Hschulz\Event;
 
 /**
  *
@@ -11,7 +13,7 @@ interface Event
      *
      * @var string
      */
-    const EVENT_ALL = '*';
+    public const EVENT_ALL = '*';
 
     /**
      *

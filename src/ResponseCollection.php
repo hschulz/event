@@ -1,15 +1,16 @@
 <?php
 
-namespace hschulz\Event;
+declare(strict_types=1);
 
-use \SplStack;
+namespace Hschulz\Event;
+
+use SplStack;
 
 /**
  *
  */
 class ResponseCollection extends SplStack
 {
-
     /**
      *
      * @param mixed $value
@@ -20,7 +21,9 @@ class ResponseCollection extends SplStack
         $isContained = false;
 
         foreach ($this as $response) {
+
             if ($response === $value) {
+
                 $isContained = true;
                 break;
             }

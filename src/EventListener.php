@@ -1,18 +1,19 @@
 <?php
 
-namespace hschulz\Event;
+declare(strict_types=1);
+
+namespace Hschulz\Event;
 
 /**
  *
  */
 class EventListener
 {
-
     /**
      *
      * @var string
      */
-    protected $name = '';
+    protected string $name = '';
 
     /**
      *
@@ -24,7 +25,7 @@ class EventListener
      *
      * @var int
      */
-    protected $priority = EventManager::PRIORITY_MIN;
+    protected int $priority = EventManager::PRIORITY_MIN;
 
     /**
      *
@@ -52,7 +53,7 @@ class EventListener
      *
      * @return callable
      */
-    public function getCallback(): callable
+    public function getCallback(): ?callable
     {
         return $this->callback;
     }

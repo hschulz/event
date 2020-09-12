@@ -1,6 +1,8 @@
 <?php
 
-namespace hschulz\Event;
+declare(strict_types=1);
+
+namespace Hschulz\Event;
 
 /**
  *
@@ -11,13 +13,13 @@ interface EventManager
      *
      * @var int
      */
-    const PRIORITY_MIN = 1;
+    public const PRIORITY_MIN = 1;
 
     /**
      *
      * @var int
      */
-    const PRIORITY_MAX = 100;
+    public const PRIORITY_MAX = 100;
 
     /**
      * Attaches a listener to an event
