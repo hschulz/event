@@ -21,9 +21,7 @@ class ResponseCollection extends SplStack
         $isContained = false;
 
         foreach ($this as $response) {
-
             if ($response === $value) {
-
                 $isContained = true;
                 break;
             }

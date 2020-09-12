@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Hschulz\Event;
 
-use Hschulz\DataStructures\Queue\PriorityQueue;
 use function array_key_exists;
 use function call_user_func;
+use Hschulz\DataStructures\Queue\PriorityQueue;
 use function is_callable;
 
 /**
