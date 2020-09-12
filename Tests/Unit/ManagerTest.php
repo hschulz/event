@@ -1,14 +1,16 @@
 <?php
 
-namespace hschulz\Event\Tests;
+declare(strict_types=1);
 
-use \hschulz\Event\AbstractEvent;
-use \hschulz\Event\Manager;
-use \PHPUnit\Framework\TestCase;
+namespace Hschulz\Event\Tests\Unit;
+
+use Hschulz\Event\AbstractEvent;
+use Hschulz\Event\Manager;
+use PHPUnit\Framework\TestCase;
 
 final class ManagerTest extends TestCase
 {
-    public function testCanAttachListener()
+    public function testCanAttachListener(): void
     {
         $methods = ['getName', 'setName', 'getParams', 'setParams'];
 
